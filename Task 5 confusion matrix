@@ -1,0 +1,67 @@
+Confusion matrix is a fairly common term when it comes to machine learning. Today I would be trying to relate the importance of confusion matrix when considering the cyber crimes.
+So confusion matrix is yet another classification metric that can be used to tell how good our model is performing. Yet it is more often used in various places which might not be using the confusion matrix.
+This all gives us an idea that there is something more to confusion matrix than just being another classification metric.
+So first lets talk about Confusion Matrix
+What is a Confusion Matrix?
+The confusion matrix was invented in 1904 by Karl Pearson. He used the term Contingency Table. A confusion matrix is a performance measurement technique for Machine learning classification problems. It’s a simple table which helps us to know the performance of the classification model on test data for the true values are known.
+A confusion matrix is a table that outlines different predictions and test results and contrasts them with real-world values. Confusion matrices are used in statistics, data mining, machine learning models and other artificial intelligence (AI) applications. A confusion matrix can also be called an error matrix.
+Confusion matrices are used to make the in-depth analysis of statistical data faster and the results easier to read through clear data visualization. The tables can help analyze faults in statistics, data mining, forensics and medical tests. A thorough analysis helps users decide what results indicate how errors are made rather than merely assessing performance.
+Confusion matrices use a simple format to log predictions. In the rows of a confusion matrix for a machine learning model, the possible predictions are aligned on the right-hand side and the actualities along the top. In the rows underneath the actualities, predictions or results are recorded. Results can include the correct indication of a positive as a true positive or a negative as a true negative, as well as an incorrect positive as a false positive or an incorrect negative as a false negative.
+
+True Positive:
+Interpretation: You predicted positive and it’s true.
+True Negative:
+Interpretation: You predicted negative and it’s true.
+False Positive: (Type 1 Error)
+Interpretation: You predicted positive and it’s false.
+False Negative: (Type 2 Error)
+Interpretation: You predicted negative and it’s false.
+So this would give an idea of what the four boxes in the confusion matrix are representing.
+Type I Error (False Positive) and Type II Error (False Negative)
+Type I Error (False Positive) and Type II Error (False Negative)
+Did you get anything about Type I and Type II Error by looking at the figure? Let’s discover it. It represents the Age (on X-axis, Independent Variable) vs Married (on Y-axis, dependent Variable) relationship.Y depends on the value of X i.e. a person is married (Y= 1 or Yes) or not married (Y= No or 0)that decision depends on Age of the person.
+Generally, less than 20-year-old person is not married and more than a 30-year-old person is married. Most of the marriages happen during the Age of 20 to 30 years. As per the figure is shown, our classification Algorithm works like if Age is less than 25 years, it will predict a person is not married and if Age is more than 25 years, it will predict a person is married.
+False Positive:
+Blue cross mark → Red cross mark (Actual → Predicted)
+Observe the cross mark symbol in the figure where Blue cross mark represents Actual Value and Red cross mark represents Predicted Value. At the Age of around 25–30 years, a person named Mr. A is not married in reality. But, Prediction says Mr. A is Married which is a wrong prediction (i.e. False) and predicted values are Yes or 1 (i.e. Positive). So it is known as “false positive” or Type I Error.
+False Negative:
+Blue circle mark → Red circle mark (Actual → Predicted)
+Here In this scenario, Blue circle mark and Red circle mark represent Actual Value and Predicted Value respectively. In reality, a person named Mr.B is Married at the age of around 20–25 years. But, predicted value says that Mr.B is not Married. So, in this case, also prediction is wrong (i.e. False) and predicted values are No or 0(i.e. Negative). It is known as “false negative” or Type II Error.
+Interpretation :
+False Positive- when a prediction is wrong & predicted value is positive false Negative- when a prediction is wrong & predicted value is Negative
+Type I and Type II Error representation in a Confusion Matrix :
+
+Confusion Matrix
+Suppose we create a ML model which predicts whether given image is of chocolate or not. Let there be a total of 100 predictions done by model:
+
+True Positive (TP): 30
+True Negative (TN): 55
+False Positive (FP): 10
+False Negative (FN): 5
+Table 1: Above is confusion matrix for the scenario
+(FP and FN are 2 types of error in Confusion Matrix).
+To calculate Accuracy:: TP+TN /TP+TN+FN+FP
+30+55/30+55+10+5 = = 0.85
+Cybercrime can be anything like:
+Stealing of personal data
+phishing
+Leak Your private photos
+Hack emails for gaining information.
+“Close to half of security analyst teams battle false positive rates of 50% or higher from their security tooling. Meantime, another report from the Ponemon Institute shows that as much as 25% of a security analyst’s time is spent chasing false positives — sifting through erroneous security alerts or false indicators of confidence — before being able to tackle real findings.
+That means that every hour an analyst spends on the job, they’re wasting 15 minutes on false positives. On average, the typical organization wastes anywhere between 424 hours and 286 hours per week on false positives”
+Confusion Matrix’s implementation in monitoring Cyber Attacks:
+The data set used for The Third International Knowledge Discovery and Data Mining Tools Competition, which was held in conjunction with KDD-99 The Fifth International Conference on Knowledge Discovery and Data Mining. The competition task was to build a network intrusion detector, a predictive model capable of distinguishing between ``bad’’ connections, called intrusions or attacks, and good normal connections. This database contains a standard set of data to be audited, which includes a wide variety of intrusions simulated in a military network environment.
+In KDD99 dataset these four attack classes (DoS, U2R,R2L, and probe) are divided into 22 different attack classes that tabulated below:
+
+In the KDD Cup 99, the criteria used for evaluation of the participant entries is the Cost Per Test (CPT) computed using the confusion matrix and a given cost matrix.
+True Positive (TP): The amount of attack detected when it is actually attack.
+True Negative (TN): The amount of normal detected when it is actually normal.
+False Positive (FP): The amount of attack detected when it is actually normal (False alarm).
+False Negative (FN): The amount of normal detected when it is actually attack.
+Conclusion
+A confusion matrix is a tabular summary of the number of correct and incorrect predictions made by a classifier. It is used to measure the performance of a classification model. It can be used to evaluate the performance of a classification model through the calculation of performance metrics like accuracy, precision, recall, and F1-score.
+Need for Confusion Matrix in Machine learning:
+It evaluates the performance of the classification models, when they make predictions on test data, and tells how good our classification model is.
+It not only tells the error made by the classifiers but also the type of errors such as it is either type-I or type-II error.
+With the help of the confusion matrix, we can calculate the different parameters for the model, such as accuracy, precision, etc.
+The confusion matrix is a matrix used to determine the performance of the classification models for a given set of test data. It can only be determined if the true values for test data are known. The matrix itself can be easily understood and implemented to test a ML model.
